@@ -44,3 +44,26 @@ You should get something like:
 ```bash
 2024/08/18 13:56:38 UDP server listening on: udp://127.0.0.1:4312
 ```
+
+When we send a message to `127.0.0.1:4312`, this program will print it out to
+the terminal:
+
+When we send the message:
+
+```bash
+cowsay "Hello CC3501" | nc -u -w1 127.0.0.1 4312
+```
+
+When the server receieves the message:
+
+```bash
+2024/08/18 14:19:10 Received message from 127.0.0.1:48713:
+ ______________
+< Hello CC3501 >
+ --------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
